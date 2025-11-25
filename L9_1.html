@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流程控制與運算子的綜合練習</title>
+</head>
+
+<body>
+
+    <script>
+        // window.alert()
+        // window.prompt()
+        // window.confirm()
+
+        let age = parseInt(prompt("請輸入年紀"));
+        let message;
+
+        if (age >= 18) {
+            message = "請記得投票";
+        } else {
+            if (!age) {
+                message = "不要亂填好嗎";
+            } else {
+                message = "下次再來";
+            }
+        }
+
+        alert(message);
+    </script>
+</body>
+
+</html>
