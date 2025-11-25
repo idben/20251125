@@ -8,6 +8,10 @@
         dialog::backdrop {
             background-color: #0000008e;
         }
+
+        .hidden {
+            display: none;
+        }
     </style>
     <title>流程控制與運算子的綜合練習</title>
 </head>
@@ -16,7 +20,7 @@
     <dialog>
         <p></p>
         <form method="dialog">
-            <button type="button">確定</button>
+            <button id="btnEnter" type="button">確定</button>
             <button>取消</button>
         </form>
     </dialog>
@@ -27,9 +31,21 @@
         const dialog = document.querySelector("dialog");
         const dialogContent = dialog.querySelector("p");
         const btnOpen = document.querySelector("#btnOpen");
+        const btnEnter = document.querySelector("#btnEnter");
+        let age, message;
 
         btnOpen.onclick = function () {
             dialog.showModal();
+        };
+
+        btnEnter.onclick = function () {
+            this.onclick = null;
+            this.classList.add("hidden");
+            const input = dialog.querySelector("input");
+            age = parseInt(input.value);
+            message = (age >= 18) ? "請記得投票" :
+                (!age) ? "不要亂填好嗎" : "下次再來";
+            showDialog(message);
         };
 
         // window.alert()
@@ -37,9 +53,8 @@
         // window.confirm()
 
         // let age = parseInt(prompt("請輸入年紀"));
-        let age;
-        let message = (age >= 18) ? "請記得投票" :
-            (!age) ? "不要亂填好嗎" : "下次再來";
+        // let message = (age >= 18) ? "請記得投票" :
+        //     (!age) ? "不要亂填好嗎" : "下次再來";
 
         // if (age >= 18) {
         //     message = "請記得投票";
