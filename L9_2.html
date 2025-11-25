@@ -20,10 +20,44 @@
             }
             console.log(i);
         }
-        const today = new Date();
-        console.log(today.toISOString());
+        const today = new Date("2021/10/09 13:23:39");
+        console.log(today.toISOString()); // .to 系列是轉換格式 -> 字串
         console.log(today.toLocaleString());
+        console.log(today.getFullYear());
+        console.log(today.getMonth()); // 從 0 計算
+        console.log(today.getDate());
+        console.log(today.getDay());
 
+        // 日期物件的比大小: 不可以用等於
+        const list = [
+            {
+                date: "2019-08-08 10:10",
+                info: "a1 感興趣，統計作品客。"
+            },
+            {
+                date: "2020-09-08 10:10",
+                info: "a2 追求一半甚至，準確。"
+            },
+            {
+                date: "2021-09-08 10:10",
+                info: "a3 工商回事本人，分類。"
+            },
+            {
+                date: "2021-10-08 10:10",
+                info: "a4 做到娛樂主板總數寬。"
+            },
+            {
+                date: "2022-09-08 10:10",
+                info: "a5 下載具體抱著，反覆。"
+            }
+        ];
+
+        for (let i = 0; i < list.length; i++) {
+            if (new Date(list[i].date) >= new Date("2021-10-01")) {
+                break;
+            }
+            console.log(list[i].info);
+        }
     </script>
 </body>
 
