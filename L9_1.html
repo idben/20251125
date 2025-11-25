@@ -14,9 +14,10 @@
 
 <body>
     <dialog>
-        <p>不要亂填好嗎</p>
+        <p></p>
         <form method="dialog">
-            <button>關閉</button>
+            <button type="button">確定</button>
+            <button>取消</button>
         </form>
     </dialog>
     <h1>職工原文一臉其他的和平眼睛成人照片或是，或是最初實用走勢而言好好持續新增本文一會兒小子事實上相機奇。</h1>
@@ -35,7 +36,8 @@
         // window.prompt()
         // window.confirm()
 
-        let age = parseInt(prompt("請輸入年紀"));
+        // let age = parseInt(prompt("請輸入年紀"));
+        let age;
         let message = (age >= 18) ? "請記得投票" :
             (!age) ? "不要亂填好嗎" : "下次再來";
 
@@ -50,7 +52,16 @@
         // }
 
         // alert(message);
-        showDialog(message);
+        // showDialog(message);
+        init();
+
+        function init() {
+            dialogContent.innerHTML = `<div>
+                                            請輸入年紀
+                                        </div>
+                                        <input type="text" autofocus>`;
+            dialog.showModal();
+        }
 
         function showDialog(text = "") {
             dialogContent.innerHTML = text;
