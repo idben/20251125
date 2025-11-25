@@ -14,6 +14,7 @@
     <script>
         const box = document.querySelector(".box");
         const text = box.innerHTML.trim();
+        box.innerHTML = "";
 
         // console.log(text.slice(0, 1));
         // console.log(text.charAt(0));
@@ -22,6 +23,23 @@
             // console.log(text.charAt(i));
 
         }
+
+        // 一次性的計時器
+        // setTimeout(function () {
+        //     console.log("到了");
+        // }, 2000);
+
+        // 無限的計時器
+        let num = 0;
+        const itervalID = setInterval(function () {
+            console.log(text.charAt(num));
+            box.innerHTML += text.charAt(num);
+            num++;
+            if (num >= text.length) {
+                clearInterval(itervalID);
+            }
+        }, 200);
+
 
 
 
