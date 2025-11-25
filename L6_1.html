@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        input[type=text] {
+            text-transform: uppercase;
+        }
+    </style>
+    <title>字串的方法</title>
+</head>
+
+<body>
+    <input type="text">
+
+    <script>
+        // 取代
+        let sentence = "今天是陰天，我最喜歡陰天了，我常常在陰天出去玩";
+        console.log(sentence.replace("陰天", "晴天")); // 取代一個
+        console.log(sentence.replaceAll("陰天", "晴天")); // 取代全部
+        console.log(sentence.replace(/陰天/g, "晴天"));
+
+        // 轉大小寫 toUpperCase()/toLowerCase() 也可以用 CSS 來做
+
+    </script>
+</body>
+
+</html>
