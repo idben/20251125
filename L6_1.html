@@ -20,9 +20,20 @@
         let sentence = "今天是陰天，我最喜歡陰天了，我常常在陰天出去玩";
         console.log(sentence.replace("陰天", "晴天")); // 取代一個
         console.log(sentence.replaceAll("陰天", "晴天")); // 取代全部
-        console.log(sentence.replace(/陰天/g, "晴天"));
+        console.log(sentence.replace(/陰天/g, "晴天")); // 使用全域正規表達式
 
         // 轉大小寫 toUpperCase()/toLowerCase() 也可以用 CSS 來做
+
+        // padStart
+        let num = 5;
+        console.log(num.toString().padStart(5, "0"));
+
+        // split
+        let pokemons = "新葉喵, 呆火鱷, 潤水鴨";
+        console.log(pokemons.split(", "));
+
+
+
 
     </script>
 </body>
