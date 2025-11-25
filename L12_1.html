@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陣列的表現方法與屬性</title>
+</head>
+
+<body>
+
+    <script>
+        // prototype: 自定類別方法
+        Array.prototype.no1 = function () {
+            return this[0];
+        };
+
+        // 兩種表現方法, 只有在長度一而且為內容是數字時, 意義不同
+        const ary1 = new Array(5);
+        const ary2 = [5]; // 官方建議, 使用 [] 這種表現方法
+        console.log(ary1);
+        console.log(ary2);
+
+        // 唯一屬性: 長度
+        console.log(ary1.length);
+        console.log(ary2.length);
+
+        console.log(ary2[0]);
+        console.log(ary2.no1());
+
+
+
+    </script>
+</body>
+
+</html>
