@@ -4,30 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        dialog::backdrop {
+            background-color: #0000008e;
+        }
+    </style>
     <title>流程控制與運算子的綜合練習</title>
 </head>
 
 <body>
+    <dialog>
+        <p>不要亂填好嗎</p>
+        <form method="dialog">
+            <button>關閉</button>
+        </form>
+    </dialog>
+    <h1>職工原文一臉其他的和平眼睛成人照片或是，或是最初實用走勢而言好好持續新增本文一會兒小子事實上相機奇。</h1>
+    <button id="btnOpen">開啟</button>
 
     <script>
+        const dialog = document.querySelector("dialog");
+        const dialogContent = dialog.querySelector("p");
+        const btnOpen = document.querySelector("#btnOpen");
+
+        btnOpen.onclick = function () {
+            dialog.showModal();
+        };
+
         // window.alert()
         // window.prompt()
         // window.confirm()
 
         let age = parseInt(prompt("請輸入年紀"));
-        let message;
+        let message = (age >= 18) ? "請記得投票" :
+            (!age) ? "不要亂填好嗎" : "下次再來";
 
-        if (age >= 18) {
-            message = "請記得投票";
-        } else {
-            if (!age) {
-                message = "不要亂填好嗎";
-            } else {
-                message = "下次再來";
-            }
+        // if (age >= 18) {
+        //     message = "請記得投票";
+        // } else {
+        //     if (!age) {
+        //         message = "不要亂填好嗎";
+        //     } else {
+        //         message = "下次再來";
+        //     }
+        // }
+
+        // alert(message);
+        showDialog(message);
+
+        function showDialog(text = "") {
+            dialogContent.innerHTML = text;
+            dialog.showModal();
         }
-
-        alert(message);
     </script>
 </body>
 
