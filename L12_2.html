@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陣列的基本方法</title>
+</head>
+
+<body>
+
+    <script>
+        // .()push 新增一個到陣列結尾 , 會改變原始陣列
+        const ary1 = [1, 2, 3];
+        ary1.push(4);
+        ary1.push(5);
+
+        // .pop() 刪除陣列最後一個元素, 並回傳刪除內容, 會改變原始陣列
+        const del1 = ary1.pop();
+
+        // .shift() 刪除陣列第一個元素, 並回傳刪除內容, 會改變原始陣列
+        const del2 = ary1.shift();
+
+        // .unshift() 新增一個到陣列開頭 , 會改變原始陣列
+        ary1.unshift(del1, del2);
+
+        // .splice() 刪除指定索引的陣列元素
+        ary1.splice(2, 1);
+
+        // .splice() 取代
+
+        console.log(del1);
+        console.log(del2);
+        console.log(ary1);
+
+    </script>
+</body>
+
+</html>
