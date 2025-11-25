@@ -21,7 +21,9 @@
 
         for (let i = 0; i < text.length; i++) {
             // console.log(text.charAt(i));
-
+            setTimeout(function () {
+                box.innerHTML += text.charAt(i);
+            }, 100 * i);
         }
 
         // 一次性的計時器
@@ -30,15 +32,15 @@
         // }, 2000);
 
         // 無限的計時器
-        let num = 0;
-        const itervalID = setInterval(function () {
-            console.log(text.charAt(num));
-            box.innerHTML += text.charAt(num);
-            num++;
-            if (num >= text.length) {
-                clearInterval(itervalID);
-            }
-        }, 200);
+        // let num = 0;
+        // const itervalID = setInterval(function () {
+        //     console.log(text.charAt(num));
+        //     box.innerHTML += text.charAt(num);
+        //     num++;
+        //     if (num >= text.length) {
+        //         clearInterval(itervalID);
+        //     }
+        // }, 200);
 
 
 
