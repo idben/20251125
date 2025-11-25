@@ -32,6 +32,23 @@
         let pokemons = "新葉喵, 呆火鱷, 潤水鴨";
         console.log(pokemons.split(", "));
 
+        // indexOf()
+        console.log(sentence.indexOf("陰天"));
+        console.log(sentence.indexOf("陰天天"));
+        console.log(sentence.indexOf("陰天", sentence.indexOf("陰天") + 1));
+        console.log(sentence.lastIndexOf("陰天"));
+
+        if (sentence.indexOf("陰天") != -1) {
+            console.log("有符合");
+        }
+
+        // includes() 
+        if (sentence.includes("陰天")) {
+            console.log("有符合");
+        }
+
+        // match / matchAll
+
 
 
 
