@@ -37,6 +37,14 @@
 
         boxsAry.splice(2, 0, ...dels)
 
+        console.log(boxsAry[0].outerHTML);
+
+        container.innerHTML = "";
+        // for (let i = 0; i < boxsAry.length; i++) {
+        //     container.innerHTML += boxsAry[i].outerHTML;
+        // }
+        container.append(...boxsAry);
+
         console.log(dels);
         console.log(boxsAry);
 
