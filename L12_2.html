@@ -28,10 +28,30 @@
         ary1.splice(2, 1);
 
         // .splice() 取代
+        ary1.splice(2, 1, 100);
+
+        // .splice() 插入
+        ary1.splice(2, 0, 200);
+
+        // .splice() 插入另一個陣列中的元素
+        const ary2 = [7, 8, 9];
+        // ary1.splice(2, 0, ary2); // 這樣的寫法會造成陣列包陣列, 也就是二維陣列
+        ary1.splice(2, 0, ...ary2); // 拓展運算子, 有[攤平]的意謂, 進階用法
+
+
 
         console.log(del1);
         console.log(del2);
         console.log(ary1);
+
+        // .slice() 取得指定索引的陣列內容
+        console.log(ary1.slice()); // 陣列的複製
+        console.log(ary1.slice(2)); // 從索引二取到最後
+        console.log(ary1.slice(2, 4));
+        console.log(ary1.slice(2, -2));
+        console.log(ary1.slice(-3, -2));
+        console.log(ary1.slice(-2, -3)); // 不合理的取用條件會回傳空陣列
+
 
     </script>
 </body>
